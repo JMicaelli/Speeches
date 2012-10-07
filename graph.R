@@ -21,8 +21,9 @@ dot = do[do$V2==t, ]
 drt = dr[dr$V2==t, ]
 ymin = min(c(min(dot$V3), min(drt$V3)))
 ymax = max(c(max(dot$V3), max(drt$V3)))
-plot(V3 ~ V1, dot, xaxt = "n", type = "p", col='blue', xlab='Time', ylab='Frequency', ylim=c(ymin, ymax), xlim=c(0,dmax))
+plot(V3 ~ V1, dot, xaxt = "n", type = "p", col='blue', main='Anger over time', xlab='Time', ylab='Percentage', ylim=c(ymin, ymax), xlim=c(0,dmax))
 points(V3 ~ V1, drt, xaxt = "n", type = "p", col='red')
+legend('topleft', c('Romney', 'Obama') ,pch=1, col=c('red', 'blue'))
 
 # save difference between averages for each category
 comp=sapply(names(table(do$V2)), function (t) {
