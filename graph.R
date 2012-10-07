@@ -15,7 +15,7 @@ dr$V1 = as.integer(dr$V1-dmin)
 dmin = 0
 dmax = max(c(max(do$V1), max(dr$V1)))
 
-# plot the angyness over time
+# plot the angriness over time
 t = 129
 dot = do[do$V2==t, ]
 drt = dr[dr$V2==t, ]
